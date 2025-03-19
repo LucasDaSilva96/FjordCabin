@@ -18,6 +18,9 @@
     --color-background: var(--background);
     --color-foreground: var(--foreground);
 
+    /* My custom colors */
+    --color-blue: oklch(35.29% 0.13558 258.814);
+
     --color-card: var(--card);
     --color-card-foreground: var(--card-foreground);
 
@@ -68,6 +71,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
     *,
     ::after,
     ::before,
@@ -155,5 +159,43 @@
 
     body {
         @apply bg-background text-foreground;
+    }
+}
+
+.slide_out_right {
+    animation: slide_out_right 0.5s ease-in-out;
+    right: -100%;
+}
+
+.slide_in_right {
+    animation: slide_in_right 0.5s ease-in-out;
+    right: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@keyframes slide_out_right {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slide_in_right {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
