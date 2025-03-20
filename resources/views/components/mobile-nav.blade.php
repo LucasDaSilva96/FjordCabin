@@ -22,9 +22,9 @@
         @foreach ($nav_array as $key => $value)
             <li
             style="
-            color: {{ request()->is($value) ? '#003680' : 'black' }};"
+            color: {{ request()->is($value) ? '#ffb700' : 'black' }};"
             >
-                <a href="{{ $value }}" class="hover:text-blue hover:underline">{{ $key }}</a>
+                <a href="{{ $value }}" class="hover:text-yellow hover:underline">{{ $key }}</a>
             </li>
         @endforeach
 
@@ -32,9 +32,9 @@
             @foreach ($auth_nav_array as $key => $value)
                 <li
                 style="
-                color: {{ request()->is($value) ? '#003680' : 'black' }};"
+                color: {{ request()->is($value) ? '#ffb700' : 'black' }};"
                 >
-                    <a href="{{ $value }}" class="hover:text-blue hover:underline">{{ $key }}</a>
+                    <a href="{{ $value }}" class="hover:text-yellow hover:underline">{{ $key }}</a>
                 </li>
             @endforeach
         @endauth
@@ -43,9 +43,9 @@
             @foreach ($guest_nav_array as $key => $value)
                 <li
                 style="
-                color: {{ request()->is($value) ? '#003680' : 'black' }};"
+                color: {{ request()->is($value) ? '#ffb700' : 'black' }};"
                 >
-                    <a href="{{ $value }}" class="hover:text-blue hover:underline">{{ $key }}</a>
+                    <a href="{{ $value }}" class="hover:text-yellow hover:underline">{{ $key }}</a>
                 </li>
             @endforeach
         @endguest

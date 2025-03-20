@@ -21,12 +21,12 @@
         @foreach ($nav_array as $key => $value)
             <li
                 style="
-                color: {{ request()->is($value) ? 'black' : 'white' }};
+                color: {{ request()->is($value) ? '#ffb700' : 'white' }};
                 font-weight: {{ request()->is($value) ? 'semi-bold' : 'normal' }};
                 transform: {{ request()->is($value) ? 'scale(1.1)' : 'scale(1)' }};
                 "
             >
-                <a href="{{ $value }}" class="hover:text-black hover:underline">{{ $key }}</a>
+                <a href="{{ $value }}" class="hover:text-yellow hover:underline">{{ $key }}</a>
             </li>
         @endforeach
 
@@ -34,12 +34,12 @@
             @foreach ($auth_nav_array as $key => $value)
                   <li
                     style="
-                    color: {{ request()->is($value) ? 'black' : 'white' }};
+                    color: {{ request()->is($value) ? '#ffb700' : 'white' }};
                     font-weight: {{ request()->is($value) ? 'semi-bold' : 'normal' }};
                     transform: {{ request()->is($value) ? 'scale(1.1)' : 'scale(1)' }};
                     "
                 >
-                    <a href="{{ $value }}" class="hover:text-black hover:underline">{{ $key }}</a>
+                    <a href="{{ $value }}" class="hover:text-yellow hover:underline">{{ $key }}</a>
                 </li>
             @endforeach
         @endauth
@@ -48,12 +48,12 @@
             @foreach ($guest_nav_array as $key => $value)
                  <li
                     style="
-                    color: {{ request()->is($value) ? 'black' : 'white' }};
+                    color: {{ request()->is($value) ? '#ffb700' : 'white' }};
                     font-weight: {{ request()->is($value) ? 'semi-bold' : 'normal' }};
                     transform: {{ request()->is($value) ? 'scale(1.1)' : 'scale(1)' }};
                     "
                 >
-                    <a href="{{ $value }}" class="hover:text-black hover:underline">{{ $key }}</a>
+                    <a href="{{ $value }}" class="hover:text-yellow hover:underline">{{ $key }}</a>
                 </li>
             @endforeach
         @endguest

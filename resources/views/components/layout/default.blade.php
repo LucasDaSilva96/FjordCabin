@@ -12,39 +12,43 @@
         @viteReactRefresh
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         {{-- @inertiaHead --}}
+         <script src="https://unpkg.com/alpinejs" defer></script>
     </head>
-    <body class="font-sans antialiased relative overflow-hidden h-full bg-slate-50">
+    <body class="font-sans antialiased relative overflow-x-hidden h-full bg-blue">
         {{-- @inertia --}}
-        <header class="bg-blue p-2 w-full flex items-center justify-between">
-            {{-- Logo --}}
-            <aside>
-                <a href="/">
-                    <img src="/logo.svg" alt="logo" class="w-20 md:w-28 h-auto object-contain">
-                </a>
-            </aside>
+        <div class="w-full max-w-[1290px] mx-auto">
 
-            {{-- Mobile-nav --}}
-            <button id="mobile_nav_toggle_btn" class="cursor-pointer block md:hidden absolute top-8 right-2 z-[55]">
-               <svg id="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-               </svg>
+            <header class="bg-blue p-2 w-full flex items-center justify-between">
+                {{-- Logo --}}
+                <aside>
+                    <a href="/">
+                        <img src="/logo.svg" alt="logo" class="w-20 md:w-28 h-auto object-contain">
+                    </a>
+                </aside>
 
-                <svg id="close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
+                {{-- Mobile-nav --}}
+                <button id="mobile_nav_toggle_btn" class="cursor-pointer block md:hidden absolute top-8 right-2 z-[55]">
+                    <svg id="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
 
-            </button>
-            <x-mobile-nav />
+                    <svg id="close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
 
-            {{-- Desktop-nav --}}
-            <x-desktop-nav />
+                </button>
+                <x-mobile-nav />
 
-        </header>
+                {{-- Desktop-nav --}}
+                <x-desktop-nav />
 
-        <main >
-            {{ $slot }}
-        </main>
+            </header>
 
+            <main>
+                {{ $slot }}
+            </main>
+
+        </div>
         {{-- Script for the mobile-nav --}}
         <script>
             const mobile_nav_parent = document.getElementById('mobile-nav');
