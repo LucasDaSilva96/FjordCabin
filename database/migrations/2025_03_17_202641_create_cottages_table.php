@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('address');  // detailed address if available
             $table->decimal('price', 8, 2); // price per night, for example
             $table->longText('image_path')->nullable(); // path to the image file
+            $table->json('gallery')->nullable(); // array of image paths
             $table->timestamps();
         });
     }

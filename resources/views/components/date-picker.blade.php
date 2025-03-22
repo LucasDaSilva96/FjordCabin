@@ -107,7 +107,7 @@
                     x-show="datePickerOpen"
                     x-transition
                     @click.away="datePickerOpen = false"
-                    class="absolute top-0 left-0 max-w-lg p-4 mt-12 antialiased bg-white border rounded-lg shadow w-[17rem] border-neutral-200/70">
+                    class="absolute top-0 left-0 max-w-lg p-4 mt-12 antialiased bg-white border rounded-lg shadow w-[17rem] border-neutral-200/70 z-50">
                     <div class="flex items-center justify-between mb-2">
                         <div>
                             <span x-text="datePickerMonthNames[datePickerMonth]" class="text-lg font-bold text-gray-800"></span>

@@ -1,56 +1,6 @@
 @php
-    $imageGallery = [
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-01.jpeg',
-        'alt' => 'Photo of Mountains',
-        'place' => 'Mountain Range 1'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-02.jpeg',
-        'alt' => 'Photo of Mountains 02',
-        'place' => 'Mountain Range 2'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-03.jpeg',
-        'alt' => 'Photo of Mountains 03',
-        'place' => 'Mountain Range 3'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-04.jpeg',
-        'alt' => 'Photo of Mountains 04',
-        'place' => 'Mountain Range 4'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-05.jpeg',
-        'alt' => 'Photo of Mountains 05',
-        'place' => 'Mountain Range 5'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-06.jpeg',
-        'alt' => 'Photo of Mountains 06',
-        'place' => 'Mountain Range 6'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-07.jpeg',
-        'alt' => 'Photo of Mountains 07',
-        'place' => 'Mountain Range 7'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-08.jpeg',
-        'alt' => 'Photo of Mountains 08',
-        'place' => 'Mountain Range 8'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-09.jpeg',
-        'alt' => 'Photo of Mountains 09',
-        'place' => 'Mountain Range 9'
-    ],
-    [
-        'photo' => 'https://cdn.devdojo.com/images/june2023/mountains-10.jpeg',
-        'alt' => 'Photo of Mountains 10',
-        'place' => 'Mountain Range 10'
-    ]
-];
+
+// dd($cottages);
 @endphp
 
 
@@ -120,7 +70,11 @@
         <h2 class="text-center text-slate-50 font-bold text-xl md:text-2xl pb-6">
             Popular Destinations
         </h2>
+        @if (!empty($imageGallery))
+
         <x-image-slider :images="$imageGallery" />
+
+        @endif
 
     </section>
 

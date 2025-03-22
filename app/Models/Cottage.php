@@ -9,4 +9,14 @@ class Cottage extends Model
 {
     /** @use HasFactory<\Database\Factories\CottageFactory> */
     use HasFactory;
+    protected $fillable = [
+        'title',
+        'description',
+        'location',
+        'address',
+        'price',
+        'image_path',
+        'user_id',
+        'gallery'
+    ];
 }
