@@ -58,15 +58,15 @@
         @guest
             <li
               style="
-                color: {{isTabActive('') ? '#ffb700' : 'white'}};
-                transform: scale({{isTabActive('') ? '1.1' : '1'}});
+                color: {{isTabActive('login') ? '#ffb700' : 'white'}};
+                transform: scale({{isTabActive('login') ? '1.1' : '1'}});
         ">
                 <a href="{{route('login')}}" class=" hover:text-yellow">Login</a>
             </li>
             <li
               style="
-                color: {{isTabActive('') ? '#ffb700' : 'white'}};
-                transform: scale({{isTabActive('') ? '1.1' : '1'}});
+                color: {{isTabActive('register') ? '#ffb700' : 'white'}};
+                transform: scale({{isTabActive('register') ? '1.1' : '1'}});
         ">
                 <a href="{{route('register')}}" class=" hover:text-yellow">Register</a>
             </li>
