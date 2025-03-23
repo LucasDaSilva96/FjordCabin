@@ -40,7 +40,7 @@
                         }
                     }, 5);
                 "
-                class="invisible block text-center text-slate-50 font-bold md:text-2xl"
+                class="invisible block text-center text-xl sm:text-2xl text-slate-50 font-bold md:text-4xl"
                 >
                 {{ $text }}
         </h1>

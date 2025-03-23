@@ -53,7 +53,9 @@
             x-trap.inert.noscroll="imageGalleryOpened"
             class="fixed inset-0 z-[20] flex items-center justify-center bg-black bg-opacity-50 select-none cursor-zoom-out" x-cloak>
 
-            <a href="/cottages/1" class="absolute top-4 right-4 z-50">Hello World</a>
+            <a :href="'/cottages/' + imageGallery[imageGalleryImageIndex - 1].id" class="absolute top-4 right-4 z-50 p-2 bg-blue-500 rounded">
+                <span x-text="imageGallery[imageGalleryImageIndex - 1].location" class="text-white"></span>
+            </a>
 
             <div class="relative flex items-center justify-center w-11/12 xl:w-4/5 h-11/12">
                 <div @click="$event.stopPropagation(); $dispatch('image-gallery-prev')" class="absolute left-0 flex items-center justify-center text-white translate-x-10 rounded-full cursor-pointer xl:-translate-x-24 2xl:-translate-x-32 bg-white/10 w-14 h-14 hover:bg-white/20">
@@ -67,7 +69,7 @@
                     x-transition:leave-end="opacity-0 transform scale-50"
                     class="object-contain object-center w-full h-full select-none cursor-zoom-out" :src="imageGalleryActiveUrl" alt="" style="display: none;">
                 <div @click="$event.stopPropagation(); $dispatch('image-gallery-next');" class="absolute right-0 flex items-center justify-center text-white -translate-x-10 rounded-full cursor-pointer xl:translate-x-24 2xl:translate-x-32 bg-white/10 w-14 h-14 hover:bg-white/20">
-              bu   <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
                 </div>
             </div>
         </div>
