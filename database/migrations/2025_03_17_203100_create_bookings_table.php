@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade'); // guest ID
             $table->date('start_date');
             $table->date('end_date');
-            $table->decimal('total_price', 8, 2);
+            $table->decimal('total_price', 8, 2)->default(random_int(100, 1000));
             $table->enum('status', ['pending', 'confirmed', 'cancelled', 'completed'])->default('pending');
             $table->timestamps();
         });

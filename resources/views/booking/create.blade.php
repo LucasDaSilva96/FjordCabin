@@ -16,6 +16,13 @@
             </div>
         @endif
 
+        @if ($canBook)
+
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6" role="alert">
+            <strong class="font-bold">This Cabin is available for booking.</strong>
+        </div>
+        @endif
+
         <div class="flex flex-col md:flex-row items-center md:space-x-6">
             <img src="{{$cottage->image_path}}" alt="{{$cottage->title}}" class="w-full md:w-1/2 h-auto max-w-lg object-cover rounded-lg shadow-lg mb-6 md:mb-0">
 

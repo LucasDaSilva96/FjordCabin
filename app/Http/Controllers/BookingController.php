@@ -35,6 +35,7 @@ class BookingController extends Controller
 
     public function store(Request $request)
     {
+
         $user = Auth::user();
 
         if(!$user) {
@@ -49,14 +50,12 @@ class BookingController extends Controller
 
         $cottage = Cottage::findOrFail($request->cottage_id);
 
-        // $booking = new Booking();
-        // $booking->start_date = $request->start_date;
-        // $booking->end_date = $request->end_date;
-        // $booking->guest_name = $request->guest_name;
-        // $booking->guest_email = $request->guest_email;
-        // $booking->guest_phone = $request->guest_phone;
-        // $booking->cottage()->associate($cottage);
-        // $booking->save();
+        $booking = new Booking();
+        $booking->start_date = $request->start_date;
+        $booking->end_date = $request->end_date;
+        $booking->cottage_id = $cottage->id;
+        $booking->user_id = $user->id;
+        $booking->save();
 
         return redirect()->route('home');
     }

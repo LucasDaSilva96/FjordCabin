@@ -37,8 +37,8 @@
         @auth
             <li
               style="
-                color: {{isTabActive('') ? '#ffb700' : 'white'}};
-                transform: scale({{isTabActive('') ? '1.1' : '1'}});
+                color: {{isTabActive('dashboard') ? '#ffb700' : 'white'}};
+                transform: scale({{isTabActive('dashboard') ? '1.1' : '1'}});
         ">
                 <a href="{{route('dashboard')}}" class=" hover:text-yellow">Dashboard</a>
             </li>

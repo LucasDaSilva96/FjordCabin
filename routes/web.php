@@ -43,6 +43,8 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
     Route::get('/dashboard', fn()=> view('dashboard.index'))->name('dashboard');
 
+    Route::post('/bookings/store', [BookingController::class, 'store'])->name('bookings.store_create');
+
 });
 
 

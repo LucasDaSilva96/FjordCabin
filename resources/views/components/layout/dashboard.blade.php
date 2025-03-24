@@ -18,7 +18,7 @@
         {{-- @inertia --}}
         <div class="w-full max-w-[1290px] mx-auto">
 
-            <header class="bg-blue p-2 w-full flex items-center justify-between">
+                  <header class="bg-blue p-2 w-full flex items-center justify-between">
                 {{-- Logo --}}
                 <aside>
                     <a href="/">
@@ -44,14 +44,14 @@
 
             </header>
 
+
             <main>
                 {{ $slot }}
             </main>
 
-            <x-footer />
-
         </div>
-        {{-- Script for the mobile-nav --}}
+
+           {{-- Script for the mobile-nav --}}
         <script>
             const mobile_nav_parent = document.getElementById('mobile-nav');
             const nav_toggle_button = document.getElementById('mobile_nav_toggle_btn');
@@ -66,6 +66,7 @@
             });
 
         </script>
+
     </body>
 </html>
 
